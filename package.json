@@ -1,0 +1,33 @@
+{
+  "name": "text-2-img-clone",
+  "version": "1.0.0",
+  "description": "A text-to-image generator using the Lustify model",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "text-to-image",
+    "stable-diffusion",
+    "lustify",
+    "ai",
+    "generator"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
