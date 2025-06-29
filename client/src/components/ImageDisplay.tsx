@@ -10,11 +10,11 @@ interface ImageDisplayProps {
 const ImageDisplay: React.FC<ImageDisplayProps> = ({ imageUrl, isGenerating, prompt }) => {
   if (isGenerating) {
     return (
-      <div className="flex flex-col items-center justify-center h-96 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300">
-        <Loader2 className="h-12 w-12 text-primary-600 animate-spin mb-4" />
+      <div className="flex flex-col items-center justify-center p-8 text-center">
+        <Loader2 className="h-12 w-12 text-gray-400 animate-spin mb-4" />
         <h3 className="text-lg font-medium text-gray-900 mb-2">Generating Image...</h3>
-        <p className="text-sm text-gray-500 text-center max-w-md">
-          Creating your image with the Lustify model. This may take a few moments.
+        <p className="text-sm text-gray-500">
+          Creating your image with the AI model. This may take a few moments.
         </p>
         {prompt && (
           <div className="mt-4 p-3 bg-white rounded-lg border max-w-md">
@@ -32,7 +32,7 @@ const ImageDisplay: React.FC<ImageDisplayProps> = ({ imageUrl, isGenerating, pro
         <ImageIcon className="h-16 w-16 text-gray-400 mb-4" />
         <h3 className="text-lg font-medium text-gray-900 mb-2">No Image Generated</h3>
         <p className="text-sm text-gray-500 text-center max-w-md">
-          Enter a prompt and click "Generate Image" to create your first image with the Lustify model.
+          Enter a prompt and click "Generate Image" to create your first image with the AI model.
         </p>
       </div>
     );

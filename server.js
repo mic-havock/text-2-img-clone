@@ -44,7 +44,7 @@ async function checkSDWebUI() {
 }
 
 /**
- * Generate image using the Lustify model via Stable Diffusion WebUI API
+ * Generate image using Stable Diffusion via Stable Diffusion WebUI API
  * @param {Object} params - Generation parameters
  * @param {string} params.prompt - Text prompt
  * @param {number} params.steps - Number of steps
@@ -159,10 +159,10 @@ app.post("/api/generate", async (req, res) => {
     // Set default values for missing parameters
     const params = {
       prompt: prompt.trim(),
-      steps: steps || 30,
-      cfg: cfg || 3.0,
-      sampler: sampler || "DPM++ 2M SDE",
-      scheduler: scheduler || "Exponential",
+      steps: steps || 35,
+      cfg: cfg || 4.0,
+      sampler: sampler || "DPM++ 2M",
+      scheduler: scheduler || "BETA",
       width: width || 512,
       height: height || 512,
       upscale: upscale || 1.0,

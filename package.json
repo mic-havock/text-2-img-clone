@@ -1,10 +1,13 @@
 {
   "name": "text-2-img-clone",
   "version": "1.0.0",
-  "description": "A text-to-image generator using the Lustify model",
+  "description": "A text-to-image generator using Stable Diffusion",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\" \"npm run sd-webui\"",
+    "server": "node server.js",
+    "client": "cd client && npm start",
+    "sd-webui": "cd stable-diffusion-webui && source venv/bin/activate && python launch.py --api --listen --port 7860 --skip-torch-cuda-test",
     "dev": "nodemon server.js",
     "build": "npm run build:client",
     "build:client": "cd client && npm run build"
@@ -19,12 +22,12 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "concurrently": "^9.2.0",
     "nodemon": "^3.0.1"
   },
   "keywords": [
     "text-to-image",
     "stable-diffusion",
-    "lustify",
     "ai",
     "generator"
   ],

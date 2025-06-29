@@ -13,10 +13,10 @@ const App: React.FC = () => {
   
   const [parameters, setParameters] = useState<GenerationParameters>({
     prompt: "",
-    steps: 30,
-    cfg: 3.0,
-    sampler: "DPM++ 2M SDE" as SamplerOption,
-    scheduler: "Exponential" as SchedulerOption,
+    steps: 35,
+    cfg: 4.0,
+    sampler: "DPM++ 2M" as SamplerOption,
+    scheduler: "BETA" as SchedulerOption,
     width: 512,
     height: 512,
     upscale: 1.4,
@@ -24,7 +24,7 @@ const App: React.FC = () => {
   });
 
   /**
-   * Generate image using the Lustify model
+   * Generate image using the AI model
    */
   const generateImage = async (): Promise<void> => {
     if (!parameters.prompt.trim()) {
@@ -69,7 +69,7 @@ const App: React.FC = () => {
     if (generatedImage) {
       const link = document.createElement("a");
       link.href = generatedImage;
-      link.download = `lustify-generated-${Date.now()}.png`;
+      link.download = `ai-generated-${Date.now()}.png`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -87,7 +87,7 @@ const App: React.FC = () => {
                 <Wand2 className="h-6 w-6 text-primary-600" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Lustify</h1>
+                <h1 className="text-2xl font-bold text-gray-900">MysticXXX</h1>
                 <p className="text-sm text-gray-500">Text-to-Image Generator</p>
               </div>
             </div>
@@ -195,8 +195,8 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center text-sm text-gray-500">
             <p>
-              Powered by the Lustify model. Recommended parameters: DPM++ 2M SDE/DPM++ 3M SDE sampler, 
-              Exponential/Karras scheduler, 30 steps, CFG 2.5-4.5.
+              Powered by the mysticxxx model. Recommended parameters: DPM++ 2M sampler, 
+              BETA scheduler, 35 steps, CFG 4.0.
             </p>
           </div>
         </div>

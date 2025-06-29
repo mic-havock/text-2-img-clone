@@ -1,10 +1,10 @@
 # Text-to-Image Clone
 
-A modern web application that provides a user-friendly interface for generating AI images using Stable Diffusion WebUI. Built with React, Node.js, and integrated with the Lustify SDXL model.
+A modern web application that provides a user-friendly interface for generating AI images using Stable Diffusion WebUI. Built with React, Node.js, and integrated with Stable Diffusion models.
 
 ## 🚀 Features
 
-- **Text-to-Image Generation**: Create images from text prompts using the Lustify SDXL model
+- **Text-to-Image Generation**: Create images from text prompts using Stable Diffusion models
 - **Modern UI**: Clean, responsive interface built with React and Tailwind CSS
 - **Advanced Parameters**: Fine-tune generation settings including steps, CFG scale, samplers, and schedulers
 - **Real-time Generation**: Live progress tracking and image display
@@ -15,7 +15,7 @@ A modern web application that provides a user-friendly interface for generating 
 
 - **Frontend**: React 18, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express.js
-- **AI Model**: Stable Diffusion WebUI with Lustify SDXL
+- **AI Model**: Stable Diffusion WebUI with various models
 - **Build Tool**: Vite
 - **Package Manager**: npm
 
@@ -88,7 +88,7 @@ Open your browser and navigate to `http://localhost:3000`
 - **Upscale**: High-resolution upscaling factor
 - **Denoising**: Strength of denoising (0.4 default)
 
-### Recommended Settings for Lustify Model
+### Recommended Settings for Stable Diffusion Models
 
 - **Sampler**: DPM++ 2M SDE or DPM++ 3M SDE
 - **Scheduler**: Exponential or Karras
@@ -127,11 +127,11 @@ SD_API_TIMEOUT=300000
 
 ### Stable Diffusion WebUI Settings
 
-The application is configured to work with the Lustify SDXL model. Key settings:
+The application is configured to work with various Stable Diffusion models. Key settings:
 
 - **API Mode**: Enabled with `--api` flag
 - **Port**: 7860 (default)
-- **Model**: lustifySDXLNSFW_v10Alpha.safetensors
+- **Model**: Various .safetensors or .ckpt files
 
 ## 🎨 API Endpoints
 
@@ -173,7 +173,7 @@ GET /api/health
 2. **Generation fails**
 
    - Check that WebUI is running on port 7860
-   - Verify the Lustify model is properly loaded
+   - Verify the model is properly loaded
    - Check server logs for detailed error messages
 
 3. **Slow generation**
@@ -201,7 +201,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) - The underlying AI framework
-- [Lustify SDXL](https://civitai.com/models/...) - The AI model used for generation
+- [Stable Diffusion](https://github.com/CompVis/stable-diffusion) - The AI model framework
 - [React](https://reactjs.org/) - Frontend framework
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 
